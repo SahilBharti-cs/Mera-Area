@@ -1,0 +1,24 @@
+kind = "mobile"
+previewPath = "/mera-area-mobile/"
+title = "Mera Area"
+description = "A friendly local-language community app for India where neighbors share problems, help each other, and build a stronger locality together."
+version = "1.0.0"
+id = "artifacts/mera-area-mobile"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/mera-area-mobile/" ]
+localPort = 23330
+
+[services.development]
+run = "pnpm --filter @workspace/mera-area-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mera-area-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/mera-area-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "23330"
+BASE_PATH = "/mera-area-mobile/"

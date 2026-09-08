@@ -1,0 +1,4 @@
+-- Demo seed guidance for a local Supabase project.
+-- Create users through Supabase Auth first, then insert profiles with matching ids.
+-- The mobile app ships with a richer offline seed in context/AppContext.tsx so
+-- the preview works without a Supabase project.
